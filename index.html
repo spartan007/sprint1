@@ -1,0 +1,51 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<link href="js/dualselector/css/main.css" rel="stylesheet" type="text/css">
+		<script src="libs/jquery-3.2.1.js"></script>
+			
+		</script>
+		
+		<script src="js/dualselector/DualSelector.js"></script>
+		
+		<script>
+		
+			$(document).ready(function(){
+				
+				var dataObj = [
+					
+					{name:"Alto",make:"Maruti"},
+					{name:"Vista",make:"TATA"},
+					{name:"Duster",make:"Renault"},
+					{name:"Baleno",make:"Maruti"},
+					{name:"Tigor",make:"TATA"},
+					{name:"Innova",make:"Toyota"},
+					{name:"Creta",make:"Hundai"},
+					{name:"I20",make:"Hundai"},
+					{name:"Polo",make:"Volksvwagen"},
+					{name:"Vento",make:"Volksvwagen"}
+				];
+			
+				var oDualSelector = new DualSelector();
+				
+				$(oDualSelector).on("creationComplete",function(){
+					oDualSelector.placeAt($("#dSContainer"));
+				});
+				
+				oDualSelector.setData(dataObj);
+				
+				
+			});
+			
+			
+		</script>
+		
+	</head>
+	
+	<body>
+	
+		<div id="dSContainer">
+			
+		</div>
+	</body>
+</html>
